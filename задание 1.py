@@ -1,20 +1,18 @@
-def SumRange(a,b,c):
+def SumRange(a,b):
     suma=0
-    suma2=0
-    if a>b or b>c:
+    if a>b :
         return 0
     else:
         for i in range(a,b+1):
             suma+=i
-        for i in range(b,c+1):
-            suma2+=i
-    return suma,suma2
+    return suma
 
 try:
     a=int(input("Введите число А:"))
     b=int(input("Введите число В:"))
     c=int(input("Введите число С:"))
-    print("Сумма целых чисел от А до В и от В до С:",SumRange(a,b,c))
+    print("Сумма целых чисел от А до В: ",SumRange(a,b))
+    print("Сумма целых чисел от В до С: ",SumRange(b,c))
 except:
     print("Введено неккоректные данные. Попробуйте еще раз")
 
